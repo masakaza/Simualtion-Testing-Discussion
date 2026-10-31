@@ -103,15 +103,15 @@ private:
                 {
                     warn_count++;
                 }
-            }
 
-            if (warn_count >= 2)
-            {
-                sys_warn = 1;
-            }
-            else
-            {
-                sys_warn = 0;
+                if (warn_count >= 2)
+                {
+                    sys_warn = 1;
+                }
+                else
+                {
+                    sys_warn = 0;
+                }
             }
 
             // RCLCPP_INFO(this->get_logger(),"Speed Difference: %d",difference_speed);
