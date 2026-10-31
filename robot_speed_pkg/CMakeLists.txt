@@ -9,7 +9,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(base_interface REQUIRED)
 
 add_executable(speed_publisher src/speed_publisher.cpp)
 add_executable(speed_monitor src/speed_monitor.cpp)
@@ -22,14 +21,12 @@ ament_target_dependencies(
   speed_publisher
   "rclcpp"
   "std_msgs"
-  "base_interface"
 )
 
 ament_target_dependencies(
   speed_monitor  
   "rclcpp"
   "std_msgs"
-  "base_interface"
 )
 
 install(TARGETS speed_publisher speed_monitor
